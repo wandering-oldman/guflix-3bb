@@ -1,0 +1,240 @@
+
+
+<html>
+<head>
+<title>WEB</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@clappr/player@0.4.0/dist/clappr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mux.js@5.6.7/dist/mux.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-pip@latest/dist/clappr-pip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/dist/clappr-playback-rate-plugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
+  <script type="text/javascript" src="http://guflix.streaming-fast.com/vip_wiseplay/WEB/debug.js"></script>
+<style>
+body {
+    background-color: #000000;
+}
+</style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-container">    
+      
+<div id="player"></div>
+          
+
+<script>
+  var player = new Clappr.Player({
+          source: 'http://v3tv.live:80/play/live.php?mac=00:1A:79:F5:5F:02&stream=191752&extension=m3u8',
+          mimeType: 'application/hls+xml',
+          height: '100%',
+          width: '100%',
+          autoPlay: true,
+          mute: true,   
+          watermark: "https://dl.dropbox.com/scl/fi/bk47on5dcmacysvnjib61/small2.png?rlkey=isaku672w5ykv25euiud764b4&dl=0",
+          position: "bottom-right",      
+          plugins: [LevelSelector, DashShakaPlayback, Clappr.MediaControl],
+          events: {onReady: function() {var plugin = this.getPlugin('click_to_pause'); plugin && plugin.disable();},},
+          chromecast: {
+              preload: 'metadata',
+              contentType: 'video/mpd',
+          },
+          shakaConfiguration: {
+              drm: {
+              clearKeys: {
+          '333de6034a1d45fe91c829539caf1149':'2710efc048ca44bba4c2b57397989a26'    
+                  }
+              },
+          },
+          shakaOnBeforeLoad: function (shaka_player) {},
+          parentId: '#player'
+      });
+</script>  
+  
+  
+     
+
+      
+        </div>
+        <div class="channel-guide">
+
+
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/nbt.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0001.png" alt="NBT 2 HD">
+                ⏹️ NBT 2 HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/thai-pbs.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0014.png" alt="TPBS">
+                ⏹️ TPBS            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/altv.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/ALTV.PNG" alt="ALTV">
+                ⏹️ ALTV            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/ch5.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon//0007.png" alt="CH5 HD">
+                ⏹️ CH5 HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/t-sport7.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/T-SPorts_7_Final.png" alt="T-SPorts7">
+                ⏹️ T-SPorts7            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/paliament.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0048.png" alt="Parliament">
+                ⏹️ Parliament            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/tnn16.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/R2_0053.png" alt="TNN24">
+                ⏹️ TNN24            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/jkn18.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/JKN18.png" alt="JKN18">
+                ⏹️ JKN18            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/nation.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0021.png" alt="Nation TV">
+                ⏹️ Nation TV            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/workpoint.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0015_R.png" alt="Workpoint TV">
+                ⏹️ Workpoint TV            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/true4u.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0054.png" alt="True4U">
+                ⏹️ True4U            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/gmm25.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0019.png" alt="GMM25">
+                ⏹️ GMM25            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/ch8.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0006.png" alt="CH8">
+                ⏹️ CH8            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/mono29.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0016.png" alt="MONO29">
+                ⏹️ MONO29            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/mcot.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0008.png" alt="MCOT HD">
+                ⏹️ MCOT HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/one31.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0012.png" alt="ONE 31 HD">
+                ⏹️ ONE 31 HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/thairath.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png" alt="Thairath TV HD">
+                ⏹️ Thairath TV HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/ch3.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0003.png" alt="3 HD">
+                ⏹️ 3 HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/amarin-tv.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0017_R.png" alt="AmarinTV HD">
+                ⏹️ AmarinTV HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/ch7.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0018.png" alt="CH7 HD">
+                ⏹️ CH7 HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/pptv.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/R_0022.png" alt="PPTV HD">
+                ⏹️ PPTV HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/asia-hits.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//101_AsianHits.png" alt="Asian Hits">
+                ⏹️ Asian Hits            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/mono29-plus.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//Mono29Plus_new.png" alt="Mono29Plus">
+                ⏹️ Mono29Plus            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/hbo.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/R_0148.png" alt="HBO HD">
+                ⏹️ HBO HD            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/hbo-signature.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0149.png" alt="HBO Signature">
+                ⏹️ HBO Signature            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/hbo-hits.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//0151.png" alt="HBO Hits">
+                ⏹️ HBO Hits            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/hbo-family.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0150.png" alt="HBO Family">
+                ⏹️ HBO Family            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/cinemax.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0147.png" alt="Cinemax">
+                ⏹️ Cinemax            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/3bb-sport1.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//3BBsports1_new.png" alt="3BBsports1">
+                ⏹️ 3BBsports1            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/love-nature.html'">
+                <img src="https://cms.dmpcdn.com/livetv/2021/10/01/c028a650-226a-11ec-8746-bdb6cf7b14ca_webp_original.png" alt="LOVE Nature 4K">
+                ⏹️ LOVE Nature 4K            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/cartoonito.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png" alt="Cartoonito">
+                ⏹️ Cartoonito            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/nickelodeon.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png" alt="Nickelodeon">
+                ⏹️ Nickelodeon            </div>
+      
+
+            <div class="channel-item" onclick="window.location.href='https://wandering-oldman.github.io/guflix-3bb/nick-jr.html'">
+                <img src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/Nickjr_2024.png" alt="Nick Junior">
+                ⏹️ Nick Junior            </div>
+      
+<!--------------------------------------------------------------------------------------------->
+
+        </div>
+    </div>
+    <script src="https://xtream-fast.serv00.net/script.js"></script>
+</body>
+</html>
